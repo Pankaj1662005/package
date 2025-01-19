@@ -1,3 +1,1 @@
-"""
-TOPSIS Toolkit: Perform TOPSIS Analysis for Multi-Criteria Decision-Making.
-"""
+from .topsis import topsis
