@@ -1,6 +1,6 @@
 import argparse
 import pandas as pd
-from pankaj_102203410_topsis.topsis import topsis
+from topsis_toolkit.topsis import topsis
 
 def main():
     parser = argparse.ArgumentParser(description="Run TOPSIS analysis.")
