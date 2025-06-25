@@ -4,7 +4,7 @@ A simple Python package and command-line tool to perform **TOPSIS (Technique for
 
 ---
 
-## 🔧 Features
+### 🔧 Features
 
 - Accepts input data via CSV files
 - Customizable **weights** and **impacts** for each criterion
