@@ -42,7 +42,7 @@ topsis-runner <input_file.csv> <weights> <impacts> <output_file.csv>
 **Example:**
 
 ```bash
-topsis-runner funds.csv 1,1,1,1,1 +,+,-,-,+ output.csv
+topsis  Book1.csv 1,1,1,1,1 +,+,-,-,+ output.csv
 ```
 
 ---
