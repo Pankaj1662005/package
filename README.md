@@ -130,6 +130,5 @@ Elective: Data Science | Language: C++ & Python
 
 ## 📄 License
 
-MIT License
-
-```
+This project is licensed under the [MIT License](https://github.com/Pankaj1662005/package/blob/main/LICENSE).  
+You are free to use, modify, and distribute this software under the terms of the license.
