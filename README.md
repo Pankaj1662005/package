@@ -1,4 +1,3 @@
-````markdown
 # TOPSIS Toolkit 📊
 
 A simple Python package and command-line tool to perform **TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution)** — a popular multi-criteria decision-making method.
