@@ -101,11 +101,18 @@ The tool will generate a file like:
 ## 📁 Project Structure
 
 ```
-topsis_toolkit/
-├── __main__.py       # CLI entry point
-├── topsis.py         # TOPSIS core logic
-setup.py              # Installation & packaging
-README.md             # This file
+├── .github
+|     ├── workflows
+|     |     ├── publish.yml
+├── 102203410-result.csv
+├── LICENSE
+├── README.md
+├── setup.py
+├── topsis_toolkit
+|     ├── __init__.py
+|     ├── cli.py
+|     ├── topsis.py
+
 ```
 
 ---
