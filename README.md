@@ -1,7 +1,3 @@
-Here's a professional and clear `README.md` you can use to showcase your TOPSIS package on GitHub:
-
----
-
 ````markdown
 # TOPSIS Toolkit 📊
 
