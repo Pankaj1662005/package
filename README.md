@@ -53,48 +53,47 @@ topsis-runner funds.csv 1,1,1,1,1 +,+,-,-,+ output.csv
 import pandas as pd
 from topsis_toolkit.topsis import topsis
 
-# Input data
-df = pd.read_csv("funds.csv")
+# Load data
+df = pd.DataFrame({
+    'Fund Name': ['M1','M2','M3','M4','M5','M6','M7','M8'],
+    'P1': [0.84,0.91,0.79,0.78,0.94,0.88,0.66,0.93],
+    'P2': [0.71,0.83,0.62,0.61,0.88,0.77,0.44,0.86],
+    'P3': [6.7,7.0,4.8,6.4,3.6,6.5,5.3,3.4],
+    'P4': [42.1,31.7,46.7,42.4,62.2,51.5,48.9,37.0],
+    'P5': [12.59,10.11,13.23,12.55,16.91,14.91,13.83,10.55]
+})
 
-# Weights and impacts
+# Specify weights & impacts
 weights = [1, 1, 1, 1, 1]
-impacts = [1, 1, -1, -1, 1]
+impacts = [1, 1, -1, -1, 1]  # '+' = benefit, '-' = cost
 
-# Run TOPSIS
+# Calculate TOPSIS scores & ranks
 scores = topsis(df.iloc[:, 1:].values, weights, impacts)
 df['Topsis Score'] = scores
 df['Rank'] = scores.argsort()[::-1] + 1
 
-df.to_csv("output.csv", index=False)
+# Display or save
+print(df)
+df.to_csv('topsis_results.csv', index=False)
 ```
 
 ---
 
-## 🧪 Sample Input (CSV)
-
-```csv
-Fund Name,P1,P2,P3,P4,P5
-M1,0.84,0.71,6.7,42.1,12.59
-M2,0.91,0.83,7.0,31.7,10.11
-M3,0.79,0.62,4.8,46.7,13.23
-M4,0.78,0.61,6.4,42.4,12.55
-M5,0.94,0.88,3.6,62.2,16.91
-M6,0.88,0.77,6.5,51.5,14.91
-M7,0.66,0.44,5.3,48.9,13.83
-M8,0.93,0.86,3.4,37.0,10.55
-```
-
----
 
 ## 💡 Output
 
 The tool will generate a file like:
 
 ```csv
-Fund Name,P1,P2,P3,P4,P5,Topsis Score,Rank
-M1,0.84,0.71,6.7,42.1,12.59,0.3821,5
-M2,0.91,0.83,7.0,31.7,10.11,0.3665,8
-...
+  Fund Name    P1    P2   P3    P4     P5  Topsis Score  Rank
+0        M1  0.84  0.71  6.7  42.1  12.59      0.578909     8
+1        M2  0.91  0.83  7.0  31.7  10.11      0.580864     5
+2        M3  0.79  0.62  4.8  46.7  13.23      0.581251     3
+3        M4  0.78  0.61  6.4  42.4  12.55      0.576470     2
+4        M5  0.94  0.88  3.6  62.2  16.91      0.587669     6
+5        M6  0.88  0.77  6.5  51.5  14.91      0.580316     1
+6        M7  0.66  0.44  5.3  48.9  13.83      0.571918     4
+7        M8  0.93  0.86  3.4  37.0  10.55      0.595536     7
 ```
 
 ---
