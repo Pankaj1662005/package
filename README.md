@@ -96,6 +96,9 @@ The tool will generate a file like:
 7        M8  0.93  0.86  3.4  37.0  10.55      0.595536     7
 ```
 
+
+
+📓 [Collab Notebook](https://colab.research.google.com/drive/1hKJe1Az81N87zsrt47OwCdryEPnEsBiO?usp=sharing)
 ---
 
 ## 📁 Project Structure
